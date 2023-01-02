@@ -17,7 +17,7 @@ async function buscarVideo(evento) {
     busca.forEach(elemento => lista.appendChild( // para cada elemento, coloca um filho
         constroiCard(elemento.titulo, elemento.descricao, elemento.url, elemento.imagem)))
 
-    if (busca.length == 0) {
+    if (busca.length == 0) { // caso o termo de busca retornar zero, será exibida a mensagem abaixo
         lista.innerHTML = `<h2 class="mensagem__titulo">Não existe vídeo com este termo</h2>`
     }
 }
