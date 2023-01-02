@@ -19,6 +19,9 @@ async function criaVideo(titulo, descricao, url, imagem) {
             imagem: imagem
         })
     });
+    if (!conexao.ok) { // caso a conexao não estaja funcionando (não ok)
+        throw new Error("Não foi possível carregar o novo vídeo")//Será jogado um novo erro.
+    }
 
     const conexaoConvertida = conexao.json();  //convertendo em json
 
